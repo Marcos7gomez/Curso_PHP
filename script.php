@@ -57,8 +57,33 @@ if ($valor == 'manzana'){
 }
 comparacion ==
 asigancion =
-*/
 
+
+function hazAlgo($valor, $valor2){
+    return $valor + $valor2;
+}
+
+$valor = hazAlgo(2, 6);
+echo $valor;
+echo '<br>';
+/* Formato iso 
+$año = date('d-m-Y H:i:s');
+print $año;
+*/
+/*echo y print tienen diferencias minimas mientras los uses 
+para imprimir un solo valor
+print_r es para imprimir arreglos */
+
+$nombre = 'marcos';
+
+/*<?= es evivalente a <?php echo */
+/* Si escribimos codigo en html dentro php
+se va a ejecutar como htm si lo imprimimos con print y echo */
+/*ERRORES parse error:error de sintaxis
+deprecated: funciones de php que estab obseletas o los erán
+strict: se estan suando malas prácticas
+notice: errores leves, fatal error: se deben corregir si o si
+warning: importacion de archivos, variables no declaradas*/
 
 
 
