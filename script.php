@@ -73,7 +73,7 @@ print $año;
 /*echo y print tienen diferencias minimas mientras los uses 
 para imprimir un solo valor
 print_r es para imprimir arreglos */
-
+/*
 $nombre = 'marcos';
 
 /*<?= es evivalente a <?php echo */
@@ -85,6 +85,79 @@ strict: se estan suando malas prácticas
 notice: errores leves, fatal error: se deben corregir si o si
 warning: importacion de archivos, variables no declaradas*/
 
+/*
+$arreglo = [1, 2, 3];
+$arregloAsociativo = ['nombre' => 'Marcos', 'edad' => 25, 'cantidad_dinero' => 3000 ];
+$arregloVacio = [];
+$arregloMultidimensional = [
+    [
+        'perro', 'perrito'
+    ],
+    [
+        'gato', 'gatito'
+    ],
+    [
+        'pajaro', 'pajarito'
+    ]
+];
 
+print_r($arregloVacio);
+echo '<br>';
+print_r($arregloAsociativo);
+echo '<br>';
+print_r($arregloMultidimensional);
+
+
+$unFalso = false;
+$unverdadero = true;
+
+if (true) {
+    echo 'verdadero';
+} else {
+    echo 'falso';
+}
+
+$fruta = 'pera';
+switch ($fruta) {
+    case 'durazno':
+        echo 'la fruta es durazno';
+        break;
+    case 'pera':
+        echo 'la fruta es pera';
+        break;
+    case 'sandia':
+        echo 'la fruta es sandia';
+        break;
+    default:
+        echo 'no es una fruta';
+        break;
+}
+
+
+/*Si no se cumple la condicion no entra ninguna vez */
+/*
+$i = 101;
+while ($i <= 100) {
+    echo "I: {$i}<br>";
+    $i++;
+}
+Si no se cumple la condicion entra 1 vez solamente 
+do {
+    echo "I: {$i}<br>";
+    $i++;
+} while ($i <= 100);
+
+
+for ($i=1; $i <=100; $i++) { 
+    echo "{$i}<br>";
+}
+*/
+
+$paises = ['Argentina', 'Brasil', 'Perú'];
+
+foreach($paises as $key => $pais){
+    echo "Pais: {$pais} Key:{$key} <br>";
+}
+// Key para mostrar el lugar que ocupa en el arreglo
 
 ?>
