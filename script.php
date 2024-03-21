@@ -196,14 +196,75 @@ echo "numero antes de pasarlo como argumento {$numero}<br>";
 holaMundo($numero);
 echo "numero despues de pasarlo como argumento {$numero}";
 */
+/*
+$fruits = array("d" => "limon", "a" => "naranja", "b" => "banana", "c" => "manzana");
+
+/*$fruits = asort($fruits);  */ /*Asi se veria si arsort no usara el paso por referencia 
+arsort($fruits);
+*/
+/* Hasta este punto $fruits ya se afecto dentro de la funcion y acá afuera 
+foreach ($fruits as $key => $val) {
+    echo "$key = $val\n";
+}
+*/
+
+/*variadic functions
+splat operator */
+/*
+//Solo se puede usar splat en el ultimo parametro de una funcion
+function imprimirPersonas($primerParametro, ...$personas){
+    var_dump($primerParametro);
+    echo "<br>";
+    foreach ($personas as $persona) {
+        echo "{$persona}<br>";
+    }
+}
+//Con splat se pueden pasar muchos argumentos como quieras 
+// "...$variable"
+//Lo usa como arreglo para que se puedan agregar varios argumentos
+
+function sumar($numero1, $numero2){
+    var_dump($numero2);
+    return $numero1 + $numero2;
+}
+$numeros = [66 , 20];
+echo "la suma es: " . sumar(...$numeros);
+*/
+/*imprimirPersonas(23.5, 'Marcos', 'Luis')
+
+//type declarations -type-hints -sugerencia de tipo
+
+function multiplicarNum(int $numero){
+    return $numero * 3;
+}
+
+$resultado = multiplicarNum((int)6.7); //No marca error pero es impreciso
+var_dump($resultado)
+*/
+
+function imprimirPersona(Persona $persona) : string{
+    return 1;
+}
+class Persona
+{
+    public $nombre;
+
+    public function __construct($nombre)
+    {
+        $this->nombre = $nombre;
+    }
 
 
+}
+/* scalar types:
+bool-int-float-string  Estos no lanzan error
+convierten silenciosamente al tipo de dato que se pidió
+ */
 
 
+$persona = new Persona('Marcos');
+imprimirPersona($persona);
 
-
-
-
-
+echo 'No se ejecutará'
 
 ?>
