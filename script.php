@@ -151,13 +151,59 @@ do {
 for ($i=1; $i <=100; $i++) { 
     echo "{$i}<br>";
 }
-*/
 
-$paises = ['Argentina', 'Brasil', 'Perú'];
+
+$paises = ['Argentina', 'Brasil','', 'Perú'];
 
 foreach($paises as $key => $pais){
+
+    if ($pais == '') {
+        break;
+    }
+    //Si llegó hasta aqui es pais valido 
     echo "Pais: {$pais} Key:{$key} <br>";
 }
 // Key para mostrar el lugar que ocupa en el arreglo
+
+
+
+function holaMundo($unNombre, $edad = 25){
+    echo "Hola mundo, {$unNombre}";
+    echo "<br> $edad";
+}
+holaMundo('Marcos');
+
+
+function holaMundo($numero){
+    return $numero += 1;
+}
+$numero = 999;
+$numero = holaMundo($numero);
+echo "numero fuera de la funcion es {$numero}";
+*/
+/*Si usamos return afecta a la variable de numero usada 
+afuera de la funcion 
+Lo que viene despues del return no se ejecuta*/
+
+/*Con & avisamos que se trabajará con paso por referencia*/
+/*
+function holaMundo(&$numero){
+    $numero = 555;
+}
+$numero = 999;
+echo "numero antes de pasarlo como argumento {$numero}<br>";
+
+holaMundo($numero);
+echo "numero despues de pasarlo como argumento {$numero}";
+*/
+
+
+
+
+
+
+
+
+
 
 ?>
